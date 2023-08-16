@@ -112,14 +112,14 @@ def send_email_notification(name, mail_id, sport_type, slot_time,sport_type1,slo
     smtp_port = 587
     smtp_username = "woxsenlab@gmail.com"
     smtp_password = "gdjxsjefnyxyvkcn"
-    recipient_email = "rizwan.zhad@woxsen.edu.in"
+    recipient_email = "sports@woxsen.edu.in"
 
     # Email content
     
     
 
     subject = f"Slot Approval: {name} has booked a slot"
-    body = f"Dear Deepanshi Gaur,\n\n{name} has booked a slot for {sport_type} or {sport_type1} at {slot_time} or {slot_time1}. Please review and approve the slot.\n\nBest regards,\nAI Research centre-Woxsen University"
+    body = f"Dear Deepanshi Gaur,\n\n{name} has booked a slot for {sport_type} or {sport_type1} at {slot_time} or {slot_time1}. Please review and approve the slot.\n\nBest regards,\nSports"
 
     # Create MIMEText and MIMEMultipart objects
     msg = MIMEMultipart()
