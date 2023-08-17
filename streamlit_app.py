@@ -98,7 +98,7 @@ def connect_to_gsheet():
 
 
 
-def send_email_notification(name, mail_id, sport_type, slot_time,sport_type1,slot_time1):
+#def send_email_notification(name, mail_id, sport_type, slot_time,sport_type1,slot_time1):
     # Email configuration
     
     
@@ -109,38 +109,38 @@ def send_email_notification(name, mail_id, sport_type, slot_time,sport_type1,slo
     # EMAIL_USE_TLS = True
     
      
-    smtp_server = "smtp.gmail.com"
-    smtp_port = 587
-    smtp_username = "woxsenlab@gmail.com"
-    smtp_password = "gdjxsjefnyxyvkcn"
-    recipient_email = "sports@woxsen.edu.in"
+    # smtp_server = "smtp.gmail.com"
+    # smtp_port = 587
+    # smtp_username = "woxsenlab@gmail.com"
+    # smtp_password = "gdjxsjefnyxyvkcn"
+    # recipient_email = "sports@woxsen.edu.in"
 
-    # Email content
+    # # Email content
     
     
 
-    subject = f"Slot Approval: {name} has booked a slot"
-    body = f"Dear Deepanshi Gaur,\n\n{name} has booked a slot for {sport_type} or {sport_type1} at {slot_time} or {slot_time1}. Please review and approve the slot.\n\nBest regards,\nSports"
+    # subject = f"Slot Approval: {name} has booked a slot"
+    # body = f"Dear Deepanshi Gaur,\n\n{name} has booked a slot for {sport_type} or {sport_type1} at {slot_time} or {slot_time1}. Please review and approve the slot.\n\nBest regards,\nSports"
 
-    # Create MIMEText and MIMEMultipart objects
-    msg = MIMEMultipart()
-    msg['From'] = smtp_username
-    msg['To'] = recipient_email
-    msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain'))
+    # # Create MIMEText and MIMEMultipart objects
+    # msg = MIMEMultipart()
+    # msg['From'] = smtp_username
+    # msg['To'] = recipient_email
+    # msg['Subject'] = subject
+    # msg.attach(MIMEText(body, 'plain'))
         
-    # Connect to the SMTP server and send email
-    try:
-        server = smtplib.SMTP(smtp_server, smtp_port)
-        server.starttls()
-        server.login(smtp_username, smtp_password)
-        server.sendmail(smtp_username, recipient_email, msg.as_string())
-        st.success("Email notification sent successfully.")
+    # # Connect to the SMTP server and send email
+    # try:
+    #     server = smtplib.SMTP(smtp_server, smtp_port)
+    #     server.starttls()
+    #     server.login(smtp_username, smtp_password)
+    #     server.sendmail(smtp_username, recipient_email, msg.as_string())
+    #     st.success("Email notification sent successfully.")
         
-    except Exception as e:
-        st.error(f"Failed to send email notification: {e}")
-    finally:
-        server.quit()
+    # except Exception as e:
+    #     st.error(f"Failed to send email notification: {e}")
+    # finally:
+    #     server.quit()
 
 
 # @st.cache+
