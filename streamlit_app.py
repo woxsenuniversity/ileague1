@@ -247,7 +247,7 @@ def indoor(gsheet_connector,name,mail_id,contact):
                                         st.write("**Slot Time:**", slot_time1)
                                         
                                         
-                                        send_email_notification(name, mail_id,"","", sport_type1, slot_time1)
+                                        #send_email_notification(name, mail_id,"","", sport_type1, slot_time1)
                             st.button("refresh", key="refresh_button")
             
                 
