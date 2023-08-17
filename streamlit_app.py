@@ -5,6 +5,7 @@ import pandas as pd
 import pytz
 from datetime import datetime
 import smtplib
+import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import csv
